@@ -41,17 +41,6 @@
     </div>
 </div>
 
-    <script>
-        const socket = io();
-
-        document.getElementById('gameButton').addEventListener('click', () => {
-            socket.emit('buttonClicked');
-        });
-
-        socket.on('buttonUpdate', () => {
-            alert('Button was clicked by someone!');
-        });
-
 <script src="/script.js"></script>
  
 </body>
