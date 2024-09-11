@@ -3,7 +3,7 @@ const socket = io();
 // Listen for the initial button counts when connected
 socket.on('initialCounts', (counts) => {
     for (const buttonId in counts) {
-        document.getElementById(buttonId.toLowerCase() + '-counter').textContent = counts[buttonId];
+        document.getElementById(buttonId + '-counter').textContent = `$${counts[buttonId]}`;
     }
 });
 
@@ -16,5 +16,5 @@ document.querySelectorAll('button').forEach(button => {
 
 // Listen for updates from the server for each button
 socket.on('updateCount', ({ buttonId, count }) => {
-    document.getElementById(buttonId.toLowerCase() + '-counter').textContent = count;
+    document.getElementById(buttonId + '-counter').textContent = `$${count}`;
 });
