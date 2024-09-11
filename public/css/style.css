@@ -37,13 +37,13 @@ button {
 }
 
 /* Green button */
-#FoodCo {
+#Trevin {
     background-color: #28a745;
     color: white;
 }
 
 /* Blue button */
-#HorizonLLC {
+#Benjy {
     background-color: #007bff;
     color: white;
 }
@@ -54,7 +54,15 @@ button:hover {
 }
 
 /* Additional button for "Korblo" */
-#Korblo {
+#Cash{
     background-color: #6c757d;
+    color: white;
+}
+#Keira{
+    background-color: #205c00;
+    color: white;
+}
+#Bayleigh{
+    background-color: #000851;
     color: white;
 }
