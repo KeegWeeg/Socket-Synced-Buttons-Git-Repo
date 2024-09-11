@@ -10,11 +10,11 @@ const io = socketIo(server);
 app.use(express.static('public'));
 
 const buttonCounts = {
-    Trevin: 0,
-    Benjy: 0,
-    Cash: 0,
-    Keira: 0,
-    Bayleigh: 0
+    thisrevin: 0,
+    benjy: 0,
+    cash: 0,
+    keira: 0,
+    bayleigh: 0
 };
 
 
