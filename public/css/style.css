@@ -12,6 +12,10 @@ body {
     text-align: center;
 }
 
+.button-counter{
+    text-align: center;
+}
+
 
 .counter {
     font-size: 18px;
@@ -32,7 +36,7 @@ h1 {
 }
 
 /* Button container for side-by-side layout */
-.button-container {
+.buttons-counters-holder {
     display: flex;
     justify-content: center;
     gap: 20px;
