@@ -9,15 +9,26 @@ const io = socketIo(server);
 // Serve static files (HTML, CSS, JS)
 app.use(express.static('public'));
 
+const buttonCountsFile = './buttonCounts.json';
+
 const buttonCounts = {
-    thisrevin: 0,
+    trevin: 0,
     benjy: 0,
     cash: 0,
     keira: 0,
     bayleigh: 0
 };
 
+const loadButtonCounts = () => {
+    if (fs.existsSync(buttonCountsFile)) {
+        const data = fs.readFileSync(buttonCountsFile);
+        buttonCounts = JSON.parse(data);
+    }
+};
 
+const saveButtonCounts = () => {
+    fs.writeFileSync(buttonCountsFile, JSON.stringify(buttonCounts));
+};
 
 // Handle socket connections
 io.on('connection', (socket) => {
