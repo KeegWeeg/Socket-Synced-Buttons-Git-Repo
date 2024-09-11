@@ -12,11 +12,6 @@ body {
     text-align: center;
 }
 
-.counter-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
 
 .counter {
     font-size: 18px;
