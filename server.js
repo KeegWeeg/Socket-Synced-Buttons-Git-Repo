@@ -9,13 +9,32 @@ const io = socketIo(server);
 // Serve static files (HTML, CSS, JS)
 app.use(express.static('public'));
 
+const buttonCounts = {
+    Trevin: 0,
+    Benjy: 0,
+    Cash: 0,
+    Keira: 0,
+    Bayleigh: 0
+};
+
+
+
 // Handle socket connections
 io.on('connection', (socket) => {
     console.log('A user connected');
 
-    socket.on('buttonClicked', () => {
-        io.emit('buttonUpdate');
-    });
+      // Send current button counts to the newly connected user
+      socket.emit('initialCounts', buttonCounts);
+
+      // Handle button clicks from the client
+      socket.on('buttonClicked', (buttonId) => {
+          // Increment the count for the clicked button
+          buttonCounts[buttonId]++;
+
+          io.emit('updateCount', { buttonId, count: buttonCounts[buttonId] });
+        });
+    
+    
 
     socket.on('disconnect', () => {
         console.log('A user disconnected');

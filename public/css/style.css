@@ -55,13 +55,13 @@ button {
 }
 
 /* Green button */
-#Trevin {
+#trevin {
     background-color: #027f1f;
     color: white;
 }
 
 /* Blue button */
-#Benjy {
+#benjy {
     background-color: #033e7e;
     color: white;
 }
@@ -72,15 +72,15 @@ button:hover {
 }
 
 /* Additional button for "Korblo" */
-#Cash{
+#cash{
     background-color: #9a0000;
     color: white;
 }
-#Keira{
+#keira{
     background-color: #fa40a0;
     color: white;
 }
-#Bayleigh{
+#bayleigh{
     background-color: #000851;
     color: white;
 }
